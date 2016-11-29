@@ -18,26 +18,22 @@ namespace maintanance_final.domain
         }
 
         public void CreateTeams(int numberOfTeams)
-        {
-
+        { 
             for (int i = 0; i < numberOfTeams; i++)
             {
                 teams.Add(new Team());
             }
 
-            for (int i = 0; i<teams.Count; i++)
-            {
-                this.ShufflePlayers();
+            this.ShufflePlayers();
 
-                //teamSize MOET BETER!!! om beurt eentje bij een team steken tot op?
-                double teamSize = Math.Ceiling((double)players.Count / numberOfTeams);
-                for(int j = 0; j < teamSize; j++)
+            for (int j = 0; j < players.Count; j++)
+            {
+                for (int i = 0; i < teams.Count; i++)
                 {
-                    if(players[j]!=null)
+                    if(players[j] != null)
                     teams.ElementAt(i).AddPlayerToTeam(players[j]);
                 }
             }
-
 
         }
 
@@ -68,6 +64,21 @@ namespace maintanance_final.domain
             players.Add(player);
         }
 
+        public override string ToString()
+        {
+            string result = "\nTEAMS\n";
+
+            foreach(Team team in teams)
+            {
+                result += team.ToString()+"\n";
+            }
+            return result;
+        }
+
+        public int GetNumberOfTeams()
+        {
+            return teams.Count;
+        }
 
     }
 }

@@ -14,7 +14,7 @@ namespace maintanance_final.domain
 
         public Player(string name)
         {
-            this.name = name;
+            Name = name;
         }
 
         public void IncrementWins()
@@ -30,6 +30,14 @@ namespace maintanance_final.domain
         public bool Equals(string name)
         {
             return this.name.Equals(name);
+        }
+
+        //Properties
+
+        public string Name
+        {
+            get;
+            set;
         }
     }
 }

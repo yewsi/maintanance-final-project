@@ -36,9 +36,15 @@ namespace maintanance_final.domain
             }
         }
 
-        public string ToString()
+        public override string ToString()
         {
-            return "TODO";
+            string result = "";
+
+            foreach(Player player in players)
+            {
+                result += player.Name + "\n";
+            }
+            return result;
         }
 
     }
