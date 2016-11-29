@@ -9,8 +9,9 @@ namespace maintanance_final.service
 {
     interface ITeamManagerService
     {
-        void AddPlayer(Player player);
+        void AddPlayer(string player);
         void DevidePlayersIntoTeams(int numberOfTeams);
         string PickRandomTeam();
+        string ShowTeams();
     }
 }

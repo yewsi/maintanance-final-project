@@ -16,9 +16,9 @@ namespace maintanance_final.service
             manager = new TeamManager();
         }
 
-        public void AddPlayer(Player player)
+        public void AddPlayer(String player)
         {
-            manager.AddNewPlayer(player);
+            manager.AddNewPlayer(new Player(player));
         }
 
         public void DevidePlayersIntoTeams(int numberOfTeams)
@@ -31,7 +31,9 @@ namespace maintanance_final.service
             return manager.PickRandomTeam();
         }
 
-        public void
-
+        public string ShowTeams()
+        {
+            return manager.ToString();
+        }
     }
 }

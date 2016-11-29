@@ -1,1 +1,6 @@
 c:\users\yewsi\documents\visual studio 2015\Projects\maintanance final\maintanance final\bin\Debug\maintanance final.exe.config
+C:\Users\Yewsi\documents\visual studio 2015\Projects\maintanance final\maintanance final\obj\Debug\maintanance final.csprojResolveAssemblyReference.cache
+C:\Users\Yewsi\documents\visual studio 2015\Projects\maintanance final\maintanance final\bin\Debug\maintanance final.exe
+C:\Users\Yewsi\documents\visual studio 2015\Projects\maintanance final\maintanance final\bin\Debug\maintanance final.pdb
+C:\Users\Yewsi\documents\visual studio 2015\Projects\maintanance final\maintanance final\obj\Debug\maintanance final.exe
+C:\Users\Yewsi\documents\visual studio 2015\Projects\maintanance final\maintanance final\obj\Debug\maintanance final.pdb
