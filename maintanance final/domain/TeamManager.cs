@@ -18,7 +18,9 @@ namespace maintanance_final.domain
         }
 
         public void CreateTeams(int numberOfTeams)
-        { 
+        {
+            teams = new List<Team>();
+
             for (int i = 0; i < numberOfTeams; i++)
             {
                 teams.Add(new Team());
@@ -26,12 +28,14 @@ namespace maintanance_final.domain
 
             this.ShufflePlayers();
 
-            for (int j = 0; j < players.Count; j++)
-            {
+            int spelersCount = 0;
+            while (spelersCount < players.Count) {
                 for (int i = 0; i < teams.Count; i++)
                 {
-                    if(players[j] != null)
-                    teams.ElementAt(i).AddPlayerToTeam(players[j]);
+                    if (spelersCount<players.Count)
+                        teams.ElementAt(i).AddPlayerToTeam(players[spelersCount]);
+
+                    spelersCount++;
                 }
             }
 
@@ -55,7 +59,7 @@ namespace maintanance_final.domain
 
         public string PickRandomTeam()
         {
-            return teams.ElementAt(new Random().Next(teams.Count)).ToString();
+            return "\nTeam:\n"+teams.ElementAt(new Random().Next(teams.Count)).ToString();
         }
 
         public void AddNewPlayer(Player player)

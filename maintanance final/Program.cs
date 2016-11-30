@@ -35,7 +35,7 @@ namespace maintanance_final
                     line = Console.ReadLine();
 
                     //Werkt niet zoals het hoort, Vorige teams opruimen en dan spelers verdelen. Elk team heeft alle spelers
-                    if (int.TryParse(readOption, out option))
+                    if (int.TryParse(line, out option))
                         service.DevidePlayersIntoTeams(option);
                 }
 
