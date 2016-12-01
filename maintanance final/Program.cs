@@ -50,7 +50,6 @@ namespace maintanance_final
                 }
 
             }
-            Console.ReadKey();
         }
     }
 }

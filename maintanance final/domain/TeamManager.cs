@@ -6,17 +6,28 @@ using System.Threading.Tasks;
 
 namespace maintanance_final.domain
 {
+    //! Class to manage teams and players
+    /*!
+      \author Adam Boghe
+      \date 2016
+      
+    */
     class TeamManager
     {
         IList<Player> players;
         IList<Team> teams;
 
+        //! TeamManager class constructor.
         public TeamManager()
         {
             players = new List<Player>();
             teams = new List<Team>();
         }
 
+        //! Method that creates teams and divide the players in them
+        /*!
+         \parameter number of teams to be created 
+        */
         public void CreateTeams(int numberOfTeams)
         {
             teams = new List<Team>();
@@ -41,7 +52,7 @@ namespace maintanance_final.domain
 
         }
 
-        public void ShufflePlayers()
+        private void ShufflePlayers()
         {
             Random rng = new Random();
 
@@ -57,10 +68,15 @@ namespace maintanance_final.domain
             }
         }
 
+        //! Method that shows the names of a random team
+        /*!
+            \return Names of people in a team, each name on a new line
+        */
         public string PickRandomTeam()
         {
             return "\nTeam:\n"+teams.ElementAt(new Random().Next(teams.Count)).ToString();
         }
+
 
         public void AddNewPlayer(Player player)
         {
@@ -68,6 +84,11 @@ namespace maintanance_final.domain
             players.Add(player);
         }
 
+
+        //! Method that shows all the player names grouped by team
+        /*!
+            \return names grouped by team, each name on a new line. Teams are seperated by a blanc line
+        */
         public override string ToString()
         {
             string result = "\nTEAMS\n";
@@ -79,6 +100,10 @@ namespace maintanance_final.domain
             return result;
         }
 
+        //! Getter for number of teams
+        /*!
+            \return number of teams
+        */
         public int GetNumberOfTeams()
         {
             return teams.Count;
